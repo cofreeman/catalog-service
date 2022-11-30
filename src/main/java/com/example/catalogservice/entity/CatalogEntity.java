@@ -9,7 +9,7 @@ import java.util.Date;
 
 @Data
 @Entity
-@Table(name="catalog")
+@Table(name="catalogs")
 public class CatalogEntity implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

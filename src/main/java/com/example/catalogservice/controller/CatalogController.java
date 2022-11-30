@@ -24,11 +24,6 @@ public class CatalogController {
     private final CatalogService catalogService;
     private final Environment environment;
 
-    @GetMapping("/health_check")
-    public String status(){
-        return String.format("It's Ok %s",environment.getProperty("local.server.port"));
-    }
-
     @GetMapping("/catalogs")
     public ResponseEntity<List<ResponseCatalog>> getCatalogs(){
         Iterable<CatalogEntity> allCatalogs = catalogService.getAllCatalogs();
